@@ -41,7 +41,7 @@ function updateList(poiData) {
       <div class="info">
         <div class="name">${poi.name}</div>
         <div class="shard">Shard ${poi.shard}</div>
-        <div class="timer">refills in ${timerText}</div>
+        <div class="timer">Refills In ${timerText}</div>
       </div>
     `;
     container.appendChild(card);
