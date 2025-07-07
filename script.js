@@ -40,7 +40,7 @@ function updateList(poiData) {
       <img src="${poi.image}" alt="${poi.name}">
       <div class="info">
         <div class="name">${poi.name}</div>
-        <div class="shard">${poi.shard} shard</div>
+        <div class="shard">Shard ${poi.shard}</div>
         <div class="timer">refills in ${timerText}</div>
       </div>
     `;
