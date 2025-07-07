@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Mystic Fountain",
+    "refillTime": "14:30",
+    "shard": 12,
+    "image": "https://placekitten.com/64/64"
+  },
+  {
+    "name": "Shadow Portal",
+    "refillTime": "14:20",
+    "shard": 20,
+    "image": "https://placekitten.com/65/65"
+  },
+  {
+    "name": "Crystal Cavern",
+    "refillTime": "14:45",
+    "shard": 16,
+    "image": "https://placekitten.com/66/66"
+  },
+  {
+    "name": "Ancient Shrine",
+    "refillTime": "15:00",
+    "shard": 18,
+    "image": "https://placekitten.com/67/67"
+  }
+]
