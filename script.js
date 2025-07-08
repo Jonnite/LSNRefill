@@ -7,14 +7,13 @@ async function fetchPOIs() {
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
   const parts = refillTimeStr.split(":").map(Number);
-  const baseH = parts[0];
-  const baseM = parts[1];
-  const baseS = parts[2] || 0;
+  const baseM = parts[0];
+  const baseS = parts[1] || 0;
 
   let baseRefill = new Date(
     now.getFullYear(),
     now.getMonth(),
-    now.getDate(),
+    now.getHour() - 1,
     baseH,
     baseM,
     baseS,
@@ -26,7 +25,7 @@ function getNextRefillTime(refillTimeStr) {
       now.getFullYear(),
       now.getMonth(),
       now.getDate() - 1,
-      baseH,
+      now.getHour() - 1,
       baseM,
       baseS,
       0
