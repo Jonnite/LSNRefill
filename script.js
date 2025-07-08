@@ -68,12 +68,12 @@ function updateList(poiData) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${poi.image}" alt="${poi.name}">
+      <img src="${poi.image}" alt="${poi.name}" />
       <div class="info">
         <div class="name">${poi.name}</div>
-        <div class="shard">Shard ${poi.shard}</div>
         <div class="timer">Refills in ${timerText}</div>
       </div>
+      <div class="shard">Shard ${poi.shard}</div>
     `;
     container.appendChild(card);
   });
