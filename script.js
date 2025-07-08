@@ -6,10 +6,25 @@ async function fetchPOIs() {
 
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
+  
   const [h, m] = refillTimeStr.split(":").map(Number);
 
-  const refill = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0, 0);
+  const utcMidnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  
+  const ukDate = new Date(utcMidnight);
+  ukDate.setUTCHours(h, m, 0, 0);
 
+  // Get UK timezone offset in minutes for now
+  const ukOffsetMinutes = -new Date().toLocaleString('en-GB', { timeZone: 'Europe/London', timeZoneName: 'short' }).includes('BST') ? 60 : 0;
+
+  // Now create refill time in UTC: subtract offset so refillTimeUTC = UK local time
+  const refillUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, m, 0));
+
+  // Add BST offset if needed (+1 hour = 60 mins)
+  const bstOffsetMs = (ukOffsetMinutes === 60 ? 60 : 0) * 60 * 1000;
+  const refill = new Date(refillUTC.getTime() - bstOffsetMs);
+
+  // If refill <= now, add 30 min intervals
   while (refill <= now) {
     refill.setTime(refill.getTime() + 30 * 60 * 1000);
   }
