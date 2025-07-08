@@ -1,9 +1,11 @@
+// Fetch POI data from data.json
 async function fetchPOIs() {
   const res = await fetch("data.json");
   const data = await res.json();
   return data;
 }
 
+// Calculate the next refill time, cycles every 30 mins starting from base refill time (which may have started yesterday)
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
   const [baseH, baseM] = refillTimeStr.split(":").map(Number);
@@ -19,8 +21,7 @@ function getNextRefillTime(refillTimeStr) {
     0
   );
 
-  // If base refill time today is *after* now, check yesterday's base time
-  // because the refill cycle started yesterday and continues every 30 mins
+  // If base refill time today is in the future, cycle started yesterday
   if (baseRefill > now) {
     baseRefill = new Date(
       now.getFullYear(),
@@ -43,6 +44,7 @@ function getNextRefillTime(refillTimeStr) {
   return nextRefill;
 }
 
+// Update the POI list UI sorted by next refill soonest
 function updateList(poiData) {
   const container = document.getElementById("poi-list");
   const now = new Date();
@@ -67,7 +69,7 @@ function updateList(poiData) {
       <div class="info">
         <div class="name">${poi.name}</div>
         <div class="shard">Shard ${poi.shard}</div>
-        <div class="timer">Refills In ${timerText}</div>
+        <div class="timer">Refills in ${timerText}</div>
       </div>
     `;
     container.appendChild(card);
