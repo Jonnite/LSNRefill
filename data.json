@@ -3,54 +3,48 @@
     "name": "Desert Village",
     "refillTime": "14:30",
     "shard": 6,
-    "image": "https://placekitten.com/64/64"
-  },
-  {
-    "name": "Shadow Portal",
-    "refillTime": "14:20",
-    "shard": 20,
-    "image": "https://placekitten.com/65/65"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "idk Village",
     "refillTime": "14:45",
     "shard": 7,
-    "image": "https://placekitten.com/66/66"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "idkk Village",
     "refillTime": "15:00",
     "shard": 10,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "Caverns",
     "refillTime": "15:00",
     "shard": 16,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/03.%20Ore/Diamond_Ore.png"
   },
   {
     "name": "Jungle Chamber",
     "refillTime": "15:00",
     "shard": 8,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Melon.png"
   },
   {
     "name": "Lost Pyramid",
     "refillTime": "15:00",
     "shard": 14,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/23.%20Sand/Chiseled_Sandstone.png"
   },
   {
     "name": "Stronghold",
     "refillTime": "15:00",
     "shard": 20,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/39.%20Admin/End_Portal_Frame.png"
   },
   {
     "name": "Nether Palace",
     "refillTime": "15:00",
     "shard": 31,
-    "image": "https://placekitten.com/67/67"
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/37.%20Nether/Ancient_Debris.png"
   }
 ]
