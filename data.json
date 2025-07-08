@@ -1,49 +1,55 @@
 [
   {
     "name": "Desert Village",
-    "refillTime": "00:35:27",
+    "refillTime": "35:27",
     "shard": 6,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
+    "name": "Plains Village",
+    "refillTime": "‏‎08:11",
+    "shard": 7,
+    "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
+  },
+  {
     "name": "Acacia Village",
-    "refillTime": "01:50:10",
+    "refillTime": "50:10",
     "shard": 10,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "Spruce Village",
-    "refillTime": "01:28:11",
+    "refillTime": "28:11",
     "shard": 29,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "Caverns",
-    "refillTime": "01:50:34",
+    "refillTime": "50:34",
     "shard": 16,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/03.%20Ore/Diamond_Ore.png"
   },
   {
     "name": "Jungle Chamber",
-    "refillTime": "01:37:23",
+    "refillTime": "37:23",
     "shard": 8,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Melon.png"
   },
   {
     "name": "Lost Pyramid",
-    "refillTime": "01:29:47",
+    "refillTime": "29:47",
     "shard": 14,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/23.%20Sand/Chiseled_Sandstone.png"
   },
   {
     "name": "Stronghold",
-    "refillTime": "01:35:21",
+    "refillTime": "35:21",
     "shard": 20,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/39.%20Admin/End_Portal_Frame.png"
   },
   {
     "name": "Nether Palace",
-    "refillTime": "08:23:24",
+    "refillTime": "23:24",
     "shard": 31,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/37.%20Nether/Ancient_Debris.png"
   }
