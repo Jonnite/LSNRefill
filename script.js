@@ -38,11 +38,12 @@ function getNextRefillTime(refillTimeStr) {
   }
 
   // Calculate how many 30-minute intervals have passed since base refill
+  const refillIntervalMs = (30 * 60 + 1) * 1000;
   const diffMs = now - baseRefill;
-  const intervalsPassed = Math.floor(diffMs / (30.01 * 60 * 1000)) + 1;
+  const intervalsPassed = Math.floor(diffMs / refillIntervalMs) + 1;
 
   // Next refill time is base refill + intervalsPassed * 30 minutes
-  const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * 30.01 * 60 * 1000);
+  const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * refillIntervalMs);
 
   return nextRefill;
 }
