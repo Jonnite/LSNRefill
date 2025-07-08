@@ -1,19 +1,37 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+}
+
+#poi-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .card {
   display: flex;
   align-items: center;
-  background-color: #121212;
+  background-color: #1e1e1e;
   border-radius: 12px;
-  padding: 12px;
-  margin: 8px 0;
-  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
   gap: 16px;
+  box-shadow: 0 2px 8px rgba(58, 142, 252, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #2a2a2a;
 }
 
 .card img {
   width: 64px;
   height: 64px;
-  border-radius: 8px;
+  border-radius: 12px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .info {
@@ -21,19 +39,21 @@
 }
 
 .name {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
 .timer {
   font-size: 1rem;
-  color: #aaa;
+  color: #7aa9f9;
 }
 
 .shard {
-  font-size: 2.5rem; /* big text */
+  font-size: 2.8rem;
   font-weight: 900;
-  color: #3a8efc; /* blue highlight, adjust as needed */
-  margin-left: auto; /* push to right */
+  color: #3a8efc;
+  margin-left: auto;
+  user-select: none;
+  white-space: nowrap;
 }
