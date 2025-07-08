@@ -73,7 +73,7 @@ function updateList(poiData) {
         <div class="name">${poi.name}</div>
         <div class="timer">Refills in ${timerText}</div>
       </div>
-      <div class="shard">Shard ${poi.shard}</div>
+      <div class="shard">${poi.shard}</div>
     `;
     container.appendChild(card);
   });
