@@ -6,30 +6,34 @@ async function fetchPOIs() {
 
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
-  
-  const [h, m] = refillTimeStr.split(":").map(Number);
+  const [baseH, baseM] = refillTimeStr.split(":").map(Number);
 
-  const utcMidnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-  
-  const ukDate = new Date(utcMidnight);
-  ukDate.setUTCHours(h, m, 0, 0);
+  // Create a Date object for today at the POI's base refill time in local time
+  const baseRefill = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    baseH,
+    baseM,
+    0,
+    0
+  );
 
-  // Get UK timezone offset in minutes for now
-  const ukOffsetMinutes = -new Date().toLocaleString('en-GB', { timeZone: 'Europe/London', timeZoneName: 'short' }).includes('BST') ? 60 : 0;
+  // Calculate difference in ms between now and base refill
+  let diff = now - baseRefill;
 
-  // Now create refill time in UTC: subtract offset so refillTimeUTC = UK local time
-  const refillUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, m, 0));
-
-  // Add BST offset if needed (+1 hour = 60 mins)
-  const bstOffsetMs = (ukOffsetMinutes === 60 ? 60 : 0) * 60 * 1000;
-  const refill = new Date(refillUTC.getTime() - bstOffsetMs);
-
-  // If refill <= now, add 30 min intervals
-  while (refill <= now) {
-    refill.setTime(refill.getTime() + 30 * 60 * 1000);
+  if (diff < 0) {
+    // base refill time is still in the future today, so next refill is at baseRefill
+    return baseRefill;
   }
 
-  return refill;
+  // Calculate how many 30-min intervals have passed since base refill time
+  const intervalsPassed = Math.floor(diff / (30 * 60 * 1000)) + 1;
+
+  // Calculate next refill time by adding intervalsPassed * 30 mins to base refill time
+  const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * 30 * 60 * 1000);
+
+  return nextRefill;
 }
 
 function updateList(poiData) {
