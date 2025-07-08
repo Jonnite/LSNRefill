@@ -33,7 +33,7 @@ function getNextRefillTime(refillTimeStr) {
     );
   }
 
-  const refillIntervalMs = (30 * 60 - 100) * 1000;
+  const refillIntervalMs = (30 * 60 + 10) * 1000;
   const diffMs = now - baseRefill;
   const intervalsPassed = Math.floor(diffMs / refillIntervalMs) + 1;
 
