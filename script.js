@@ -42,7 +42,7 @@ function getNextRefillTime(refillTimeStr) {
   const intervalsPassed = Math.floor(diffMs / (30.01 * 60 * 1000)) + 1;
 
   // Next refill time is base refill + intervalsPassed * 30 minutes
-  const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * 30 * 60 * 1000);
+  const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * 30.01 * 60 * 1000);
 
   return nextRefill;
 }
