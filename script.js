@@ -7,11 +7,11 @@ async function fetchPOIs() {
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
   const [h, m] = refillTimeStr.split(":").map(Number);
-  const refill = new Date();
-  refill.setUTCHours(h - 1, m, 0, 0); // Adjust BST to UTC
+
+  const refill = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0, 0);
 
   while (refill <= now) {
-    refill.setTime(refill.getTime() + 30 * 60 * 1000); // Add 30 mins
+    refill.setTime(refill.getTime() + 30 * 60 * 1000);
   }
 
   return refill;
