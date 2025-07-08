@@ -8,7 +8,10 @@ async function fetchPOIs() {
 // Calculate the next refill time, cycles every 30 mins starting from base refill time (which may have started yesterday)
 function getNextRefillTime(refillTimeStr) {
   const now = new Date();
-  const [baseH, baseM] = refillTimeStr.split(":").map(Number);
+  const parts = refillTimeStr.split(":").map(Number);
+  const baseH = parts[0];
+  const baseM = parts[1];
+  const baseS = parts[2] || 0;  // default to 0 if no seconds given
 
   // Base refill time today
   let baseRefill = new Date(
@@ -17,11 +20,10 @@ function getNextRefillTime(refillTimeStr) {
     now.getDate(),
     baseH,
     baseM,
-    0,
+    baseS,
     0
   );
 
-  // If base refill time today is in the future, cycle started yesterday
   if (baseRefill > now) {
     baseRefill = new Date(
       now.getFullYear(),
@@ -29,16 +31,13 @@ function getNextRefillTime(refillTimeStr) {
       now.getDate() - 1,
       baseH,
       baseM,
-      0,
+      baseS,
       0
     );
   }
 
-  // Calculate how many 30-minute intervals have passed since base refill
   const diffMs = now - baseRefill;
   const intervalsPassed = Math.floor(diffMs / (30 * 60 * 1000)) + 1;
-
-  // Next refill time is base refill + intervalsPassed * 30 minutes
   const nextRefill = new Date(baseRefill.getTime() + intervalsPassed * 30 * 60 * 1000);
 
   return nextRefill;
