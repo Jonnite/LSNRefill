@@ -1,8 +1,8 @@
 [
   {
-    "name": "Mystic Fountain",
+    "name": "Desert Village",
     "refillTime": "14:30",
-    "shard": 12,
+    "shard": 6,
     "image": "https://placekitten.com/64/64"
   },
   {
@@ -12,15 +12,45 @@
     "image": "https://placekitten.com/65/65"
   },
   {
-    "name": "Crystal Cavern",
+    "name": "idk Village",
     "refillTime": "14:45",
-    "shard": 16,
+    "shard": 7,
     "image": "https://placekitten.com/66/66"
   },
   {
-    "name": "Ancient Shrine",
+    "name": "idkk Village",
     "refillTime": "15:00",
-    "shard": 18,
+    "shard": 10,
+    "image": "https://placekitten.com/67/67"
+  },
+  {
+    "name": "Caverns",
+    "refillTime": "15:00",
+    "shard": 16,
+    "image": "https://placekitten.com/67/67"
+  },
+  {
+    "name": "Jungle Chamber",
+    "refillTime": "15:00",
+    "shard": 8,
+    "image": "https://placekitten.com/67/67"
+  },
+  {
+    "name": "Lost Pyramid",
+    "refillTime": "15:00",
+    "shard": 14,
+    "image": "https://placekitten.com/67/67"
+  },
+  {
+    "name": "Stronghold",
+    "refillTime": "15:00",
+    "shard": 20,
+    "image": "https://placekitten.com/67/67"
+  },
+  {
+    "name": "Nether Palace",
+    "refillTime": "15:00",
+    "shard": 31,
     "image": "https://placekitten.com/67/67"
   }
 ]
