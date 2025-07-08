@@ -14,7 +14,7 @@ function getNextRefillTime(refillTimeStr) {
     now.getFullYear(),
     now.getMonth(),
     now.getHour() - 1,
-    now.getHour() - 1,
+    now.getHours() - 1,
     baseM,
     baseS,
     0
@@ -25,7 +25,7 @@ function getNextRefillTime(refillTimeStr) {
       now.getFullYear(),
       now.getMonth(),
       now.getDate() - 1,
-      now.getHour() - 1,
+      now.getHours() - 1,
       baseM,
       baseS,
       0
