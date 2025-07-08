@@ -13,7 +13,6 @@ function getNextRefillTime(refillTimeStr) {
   let baseRefill = new Date(
     now.getFullYear(),
     now.getMonth(),
-    now.getHour() - 1,
     now.getHours() - 1,
     baseM,
     baseS,
