@@ -1,13 +1,13 @@
 [
   {
     "name": "Desert Village",
-    "refillTime": "01:35:27",
+    "refillTime": "00:35:27",
     "shard": 6,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
   {
     "name": "Plains Village",
-    "refillTime": "‏‎03:08:11",
+    "refillTime": "‏‎00:08:11",
     "shard": 7,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/18.%20Decoration/Hay_Block.png"
   },
@@ -49,7 +49,7 @@
   },
   {
     "name": "Nether Palace",
-    "refillTime": "02:23:24",
+    "refillTime": "00:23:24",
     "shard": 31,
     "image": "https://mcicons.ccleaf.com/assets/20.%20Blocks/37.%20Nether/Ancient_Debris.png"
   }
